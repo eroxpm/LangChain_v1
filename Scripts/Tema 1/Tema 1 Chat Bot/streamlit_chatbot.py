@@ -1,7 +1,11 @@
 import streamlit as st
 from langchain_openai import ChatOpenAI
-from langchain.schema import AIMessage, HumanMessage, SystemMessage
-from langchain.prompts import PromptTemplate
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
+from langchain_core.prompts import PromptTemplate
+from dotenv import load_dotenv
+
+# Cargar las variables de entorno desde el archivo .env
+load_dotenv()
 
 # Configuración inicial
 st.set_page_config(page_title="Chatbot Básico", page_icon="🤖")
